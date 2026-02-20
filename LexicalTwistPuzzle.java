@@ -12,9 +12,12 @@ public class LexicalTwistPuzzle {
         String reversed = new StringBuilder(word1).reverse().toString();
 
         if (reversed.equalsIgnoreCase(word2)) {
-            System.out.println("Words are reverse of each other");
-        } else {
-            System.out.println("Words are NOT reverse");
+
+            String transformed = reversed
+                    .toLowerCase()
+                    .replaceAll("[aeiou]", "@");
+
+            System.out.println(transformed);
         }
     }
 }
