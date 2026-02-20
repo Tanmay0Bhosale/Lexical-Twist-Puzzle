@@ -6,22 +6,15 @@ public class LexicalTwistPuzzle {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter first word: ");
         String word1 = sc.nextLine();
-
-        System.out.print("Enter second word: ");
         String word2 = sc.nextLine();
 
-        if (word1.contains(" ")) {
-            System.out.println(word1 + " is an invalid word");
-            return;
-        }
+        String reversed = new StringBuilder(word1).reverse().toString();
 
-        if (word2.contains(" ")) {
-            System.out.println(word2 + " is an invalid word");
-            return;
+        if (reversed.equalsIgnoreCase(word2)) {
+            System.out.println("Words are reverse of each other");
+        } else {
+            System.out.println("Words are NOT reverse");
         }
-
-        System.out.println("Valid Inputs Accepted");
     }
 }
