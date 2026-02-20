@@ -6,15 +6,22 @@ public class LexicalTwistPuzzle {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Lexical Twist Puzzle");
-
         System.out.print("Enter first word: ");
         String word1 = sc.nextLine();
 
         System.out.print("Enter second word: ");
         String word2 = sc.nextLine();
 
-        System.out.println("First Word: " + word1);
-        System.out.println("Second Word: " + word2);
+        if (word1.contains(" ")) {
+            System.out.println(word1 + " is an invalid word");
+            return;
+        }
+
+        if (word2.contains(" ")) {
+            System.out.println(word2 + " is an invalid word");
+            return;
+        }
+
+        System.out.println("Valid Inputs Accepted");
     }
 }
